@@ -320,6 +320,9 @@ spec:
 {{- if .Values.prometheus.prometheusSpec.disableCompaction }}
   disableCompaction: {{ .Values.prometheus.prometheusSpec.disableCompaction }}
 {{- end }}
+{{- if .Values.prometheus.prometheusSpec.hostNetwork }}
+  hostNetwork: {{ .Values.prometheus.prometheusSpec.hostNetwork }}
+{{- end }}
   portName: {{ .Values.prometheus.prometheusSpec.portName }}
 {{- if .Values.prometheus.prometheusSpec.volumes }}
   volumes:
